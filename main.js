@@ -15,5 +15,5 @@ function addBorder(array) {
 // Day 2
 function addTwoDigits(num) {
   const digits = num.toString().split('')
-  return digits.reduce((prev, current) => parseInt(prev) + parseInt(current))
+  return digits.reduce((prev, current) => parseInt(prev) + parseInt(current), 0)
 }
