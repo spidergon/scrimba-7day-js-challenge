@@ -17,3 +17,15 @@ function addTwoDigits(num) {
   const digits = num.toString().split('')
   return digits.reduce((prev, current) => parseInt(prev) + parseInt(current), 0)
 }
+
+// Day 3
+function firstDuplicate(nums) {
+  let first = -1
+  nums.some((num, index) => {
+    if (nums.indexOf(num) < index) {
+      first = num
+      return true
+    }
+  })
+  return first
+}
