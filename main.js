@@ -20,12 +20,21 @@ function addTwoDigits(num) {
 
 // Day 3
 function firstDuplicate(nums) {
-  let first = -1
-  nums.some((num, index) => {
-    if (nums.indexOf(num) < index) {
-      first = num
-      return true
-    }
-  })
-  return first
+  // let first = -1
+  // nums.some((num, index) => {
+  //   if (nums.indexOf(num) < index) {
+  //     first = num
+  //     return true
+  //   }
+  // })
+  // return first
+
+  const first = {}
+
+  for (let num of nums) {
+    if (first.hasOwnProperty(num)) return num
+    first[num] = null
+  }
+
+  return -1
 }
