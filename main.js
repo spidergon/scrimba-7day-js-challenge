@@ -60,3 +60,9 @@ function sumAllPrimes(num) {
   }
   return sum
 }
+
+// Day 5
+function evenDigitsOnly(number) {
+  const digits = number.toString().split('')
+  return digits.every(d => parseInt(d) % 2 === 0)
+}

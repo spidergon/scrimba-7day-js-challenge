@@ -66,3 +66,28 @@ describe('day4 - sumAllPrimes()', () => {
     expect(result).toBe(17)
   })
 })
+
+// Day 5
+describe('day 5 - evenDigitsOnly()', () => {
+  it('returns true when all digits are even', () => {
+    // act
+    const result = evenDigitsOnly(248622)
+
+    // log
+    console.log('day 5 - result 1:', result)
+
+    // assert
+    expect(result).toBe(true)
+  })
+
+  it('returns fale when any digits are odd', () => {
+    // act
+    const result = evenDigitsOnly(642386)
+
+    // log
+    console.log('day 5 - result 2:', result)
+
+    // assert
+    expect(result).toBe(false)
+  })
+})
