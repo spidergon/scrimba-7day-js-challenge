@@ -91,3 +91,17 @@ describe('day 5 - evenDigitsOnly()', () => {
     expect(result).toBe(false)
   })
 })
+
+// Day 6
+describe('day 6 - makeArrayConsecutive()', () => {
+  it('returns total missing numbers between smallest and largest number', () => {
+    // act
+    const result = makeArrayConsecutive([6, 2, 3, 8])
+
+    // log
+    console.log('day 6 - result: ', result)
+
+    // assert
+    expect(result).toBe(3)
+  })
+})

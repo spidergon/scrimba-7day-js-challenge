@@ -66,3 +66,15 @@ function evenDigitsOnly(number) {
   const digits = number.toString().split('')
   return digits.every(d => parseInt(d) % 2 === 0)
 }
+
+// Day 6
+function makeArrayConsecutive(nums) {
+  let count = 0
+  const sortedNums = nums.sort((a, b) => a - b)
+  const first = sortedNums[0]
+  const last = sortedNums[sortedNums.length - 1]
+  for (let i = first; i < last; i++) {
+    if (sortedNums.indexOf(i) === -1) count++
+  }
+  return count
+}
