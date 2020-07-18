@@ -70,11 +70,12 @@ function evenDigitsOnly(number) {
 // Day 6
 function makeArrayConsecutive(nums) {
   let count = 0
-  const sortedNums = nums.sort((a, b) => a - b)
-  const first = sortedNums[0]
-  const last = sortedNums[sortedNums.length - 1]
+  nums.sort((a, b) => a - b)
+  const first = nums[0]
+  const last = nums[nums.length - 1]
   for (let i = first; i < last; i++) {
-    if (sortedNums.indexOf(i) === -1) count++
+    // if (nums.indexOf(i) === -1) count++
+    if (!nums.includes(i)) count++
   }
   return count
 }
