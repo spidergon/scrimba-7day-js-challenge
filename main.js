@@ -79,3 +79,8 @@ function makeArrayConsecutive(nums) {
   }
   return count
 }
+
+// Day 7
+function properNounCorrection(str) {
+  return str[0].toUpperCase() + str.slice(1).toLowerCase()
+}
